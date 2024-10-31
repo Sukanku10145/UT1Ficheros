@@ -83,9 +83,11 @@ public class CotizacionManager {
             while (true) {
                 Cotizacion cot = (Cotizacion) ois.readObject(); // Leer una cotización del archivo
                 // Verificar si la cotización coincide con la fecha y hora especificadas
+                if (cot.getFecha().equals(dia) && cot.getHora().equals(hora)) {
                     System.out.println(cot); // Mostrar la cotización encontrada
                     encontrada = true; // Cambiar la bandera a verdadera
                     break; // Salir del bucle si se encontró la cotización
+                }
             }
             // Si no se encontró la cotización, mostrar un mensaje
             if (!encontrada) {
