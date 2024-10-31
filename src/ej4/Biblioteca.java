@@ -1,6 +1,7 @@
 package ej4; // Paquete donde se encuentra la clase Biblioteca
 
 import java.io.RandomAccessFile; // Importa la clase para trabajar con archivos de acceso aleatorio
+import java.io.File;
 import java.io.IOException; // Importa la clase para manejar excepciones de entrada/salida
 
 // Clase que representa una biblioteca y gestiona libros
@@ -9,6 +10,11 @@ public class Biblioteca {
 
     // Constructor que inicializa el archivo de la biblioteca
     public Biblioteca(String nombreArchivo) throws IOException {
+        // Eliminar el archivo existente si existe
+        File file = new File(nombreArchivo);
+        if (file.exists()) {
+            file.delete();
+        }
         archivo = new RandomAccessFile(nombreArchivo, "rw"); // Abre el archivo en modo lectura y escritura
     }
 

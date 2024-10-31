@@ -8,7 +8,7 @@ public class ej2a {
 	public static void main(String[] args) {
 		// Verifica que se ha pasado exactamente un argumento (la ruta del archivo)
 		if (args.length != 1) {
-			System.out.println("Uso: java ej1a <ruta_archivo>"); // Mensaje de uso correcto
+			System.out.println("Uso: java -jar ej2a.jar <ruta_archivo>"); // Mensaje de uso correcto
 			return; // Termina la ejecución si no se proporciona la ruta
 		}
 

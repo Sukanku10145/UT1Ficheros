@@ -10,7 +10,7 @@ public class ej2b {
 	public static void main(String[] args) {
 		// Verifica que se ha pasado exactamente un argumento (la ruta del archivo)
 		if (args.length != 1) {
-			System.out.println("Uso: java ej1b <ruta_archivo>"); // Mensaje de uso correcto
+			System.out.println("Uso: java -jar ej2b.jar <ruta_archivo>"); // Mensaje de uso correcto
 			return; // Termina la ejecución si no se proporciona la ruta
 		}
 
